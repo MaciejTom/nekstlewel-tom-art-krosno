@@ -67,73 +67,69 @@ Architectural details sharp and prominent.
 
 ---
 
-## 3. PORTFOLIO IMAGES
+## 3. PORTFOLIO IMAGES (REALIZACJE)
 
 ### 3a. Nowoczesny dom jednorodzinny
-**Filename:** `portfolio-1.jpg`
+**Filename:** `photo-7.jpg`
 **Aspect ratio:** 4:3
+**Opis:** Elewacja biało-grafitowa z pionową blachą, duże przeszklenia, drewniana altana. Nowoczesna architektura z dbałością o proporcje.
 
 ```
-Professional construction photography, 35mm lens, slightly desaturated colors.
-Color scheme: dark backgrounds, warm yellow/gold accents.
-
-Modern Polish single-family home, white and graphite facade.
-Vertical metal cladding panels, large glass windows.
-Wooden pergola or terrace accent.
-Evening blue hour with warm interior lights glowing.
-Yellow construction markers or equipment accent.
-Contemporary minimalist architecture.
+Professional architectural photography of a modern Polish single-family home.
+White and graphite facade with vertical metal cladding panels.
+Large floor-to-ceiling glass windows reflecting evening sky.
+Wooden pergola or terrace accent on the side.
+Evening blue hour with warm golden interior lights glowing through windows.
+Manicured lawn in foreground, contemporary minimalist architecture.
+Magazine-quality real estate photography, dramatic sky.
 --ar 4:3 --s 250 --q 2
 ```
 
 ### 3b. Dom w stylu klasycznym
-**Filename:** `portfolio-2.jpg`
+**Filename:** `photo-1.jpg`
 **Aspect ratio:** 4:3
+**Opis:** Elegancka biała elewacja z kolumnami, dach ceramiczny, detale architektoniczne. Styl klasyczny wykonany z precyzją.
 
 ```
-Professional construction photography, 35mm lens, slightly desaturated colors.
-Color scheme: dark backgrounds, warm yellow/gold accents.
-
-Classic Polish manor-style house with white columns.
-Ornate architectural details, decorative cornices.
-Red ceramic roof tiles, symmetrical design.
-Golden hour lighting emphasizing white facade.
-Yellow safety helmet on ground as subtle accent.
-Stately, prestigious appearance.
+Professional architectural photography of elegant Polish manor-style house.
+White classical facade with decorative columns at entrance.
+Red ceramic roof tiles, symmetrical design with ornate cornices.
+Architectural details sharp and prominent, stucco decorations.
+Golden hour warm lighting emphasizing white facade.
+Well-maintained garden visible, prestigious residential appearance.
+Real estate magazine quality, Polish residential architecture.
 --ar 4:3 --s 250 --q 2
 ```
 
 ### 3c. Wykończenie wnętrza — sztukaterie
-**Filename:** `portfolio-3.jpg`
+**Filename:** `photo-4.jpg`
 **Aspect ratio:** 4:3
+**Opis:** Korytarz z białymi panelami ozdobnymi na ścianach, gładki sufit. Sztukaterie nadają wnętrzu charakter i elegancję.
 
 ```
-Professional construction photography, 35mm lens, slightly desaturated colors.
-Color scheme: dark backgrounds, warm yellow/gold accents.
-
-Interior hallway with white decorative wall panels and moldings.
-Smooth plastered ceiling, elegant stucco work.
-Warm yellow wall sconce lighting visible.
-Clean, freshly completed interior.
-Detail shot showing craftsmanship quality.
-Sophisticated European interior design.
+Professional interior photography of elegant Polish home hallway.
+White decorative wall panels and moldings (stucco work).
+Smooth perfectly plastered ceiling, crown molding details.
+Warm ambient lighting from wall sconces with golden glow.
+Clean freshly completed interior, hardwood or marble flooring.
+Sophisticated European interior design, showing craftsmanship quality.
+Wide angle, symmetrical composition, luxurious residential feel.
 --ar 4:3 --s 250 --q 2
 ```
 
-### 3d. Remont elewacji
-**Filename:** `portfolio-4.jpg`
+### 3d. Remont elewacji (Metamorfoza)
+**Filename:** `photo-8.jpg`
 **Aspect ratio:** 4:3
+**Opis:** Transformacja budynku — nowa elewacja biało-szara z drewnianymi panelami, wymiana dachu. Efekt: dom nie do poznania.
 
 ```
-Professional construction photography, 35mm lens, slightly desaturated colors.
-Color scheme: dark backgrounds, warm yellow/gold accents.
-
-Before-after transformation feel: renovated Polish house.
-White and gray facade with wooden accent panels.
-New roof, clean modern appearance.
-Yellow construction scaffolding partially visible.
-Dramatic improvement visible in the architecture.
-Professional renovation showcase.
+Professional architectural photography showing dramatic house renovation.
+Freshly renovated Polish house with white and gray modern facade.
+Wooden accent panels on part of exterior, brand new roof.
+Clean contemporary appearance, complete transformation visible.
+Evening lighting with warm interior glow through windows.
+Before-after transformation feel, professional renovation showcase.
+Magazine-quality real estate photography, dramatic improvement evident.
 --ar 4:3 --s 250 --q 2
 ```
 

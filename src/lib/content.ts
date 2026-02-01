@@ -145,36 +145,36 @@ export const portfolioContent = {
     "Każde zlecenie traktuję indywidualnie. Oto wybrane prace z ostatnich miesięcy:",
   items: [
     {
-      id: "nowoczesny-dom",
-      title: "Nowoczesny dom jednorodzinny",
-      description:
-        "Elewacja biało-grafitowa z pionową blachą, duże przeszklenia, drewniana altana. Nowoczesna architektura z dbałością o proporcje.",
-      tags: ["elewacja", "nowoczesny"],
-      image: "/1.jpg",
-    },
-    {
       id: "dom-klasyczny",
       title: "Dom w stylu klasycznym",
       description:
-        "Elegancka biała elewacja z kolumnami, dach ceramiczny, detale architektoniczne. Styl klasyczny wykonany z precyzją.",
+        "Elegancka biała elewacja z kolumnami, czerwona dachówka ceramiczna. Prace wykończeniowe w toku — solidne fundamenty estetyki.",
       tags: ["elewacja", "klasyczny"],
-      image: "/2.jpg",
-    },
-    {
-      id: "sztukaterie",
-      title: "Wykończenie wnętrza — sztukaterie",
-      description:
-        "Korytarz z białymi panelami ozdobnymi na ścianach, gładki sufit. Sztukaterie nadają wnętrzu charakter i elegancję.",
-      tags: ["wnętrze", "wykończenie"],
-      image: "/3.jpg",
+      image: "/real-1.jpg",
     },
     {
       id: "remont-elewacji",
-      title: "Remont elewacji",
+      title: "Remont elewacji z ociepleniem",
       description:
-        "Transformacja budynku — nowa elewacja biało-szara z drewnianymi panelami, wymiana dachu. Efekt: dom nie do poznania.",
+        "Kompleksowa termomodernizacja — nowa elewacja biało-szara z drewnianymi panelami dekoracyjnymi. Dom nie do poznania.",
       tags: ["elewacja", "remont"],
-      image: "/4.jpg",
+      image: "/real-2.jpg",
+    },
+    {
+      id: "lazienka",
+      title: "Wykończenie łazienki",
+      description:
+        "Nowoczesna łazienka z płytkami wielkoformatowymi, kabina prysznicowa, grzejnik drabinkowy. Pełne wykończenie pod klucz.",
+      tags: ["wnętrze", "wykończenie"],
+      image: "/real-3.jpg",
+    },
+    {
+      id: "elewacja-zolta",
+      title: "Elewacja — odświeżenie fasady",
+      description:
+        "Świeża żółta elewacja z cokołem klinkierowym. Wymiana rynien, docieplenie i malowanie. Efekt: jak nowy dom.",
+      tags: ["elewacja", "malowanie"],
+      image: "/real-4.jpg",
     },
   ],
   cta: {
