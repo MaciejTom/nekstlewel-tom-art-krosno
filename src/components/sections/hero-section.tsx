@@ -4,101 +4,82 @@ import Image from "next/image";
 import { heroContent, siteConfig } from "@/lib/content";
 
 const s = {
-  section: "min-h-screen flex items-center relative bg-background pt-20 overflow-hidden",
-  overlay: "absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-background/20 z-10",
-  imageBg: "absolute inset-0 animate-subtle-zoom",
-  container: "container mx-auto px-6 py-16 lg:py-24 relative z-20",
-  content: "max-w-4xl",
+  section: "min-h-[80vh] flex items-center relative bg-background pt-20",
 
-  headline: "font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-foreground leading-[0.9] mb-8 animate-fade-in-up text-shadow-sm",
-  headlineAccent: "text-transparent bg-clip-text bg-gradient-to-r from-primary via-yellow-200 to-primary animate-gradient-x",
+  imageBg: "absolute inset-0",
+  overlay: "absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/60 z-10",
 
-  subtitle: "text-lg md:text-xl text-muted-foreground max-w-2xl mb-12 leading-relaxed animate-fade-in-up delay-100 font-medium",
+  container: "container mx-auto px-6 py-12 lg:py-16 relative z-20",
+  content: "max-w-2xl",
 
-  ctaWrapper: "flex flex-col sm:flex-row gap-5 mb-14 animate-fade-in-up delay-200",
-  ctaPrimary: "inline-flex items-center justify-center gap-3 bg-primary text-primary-foreground px-10 py-5 text-lg md:text-xl font-heading tracking-wider btn-hover animate-glow-pulse",
-  ctaSecondary: "inline-flex items-center justify-center gap-2 border-2 border-foreground/20 text-foreground px-10 py-5 text-lg md:text-xl font-heading tracking-wider hover:border-primary hover:text-primary transition-all duration-300 backdrop-blur-sm",
+  headline: "font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-foreground leading-[0.95] mb-4",
+  headlineAccent: "text-primary",
 
-  socialProofBar: "flex flex-wrap gap-4 md:gap-8 pt-8 border-t border-border/30 animate-fade-in-up delay-300",
-  socialProofItem: "flex items-center gap-3 text-sm md:text-base text-foreground/80 bg-background/50 backdrop-blur-md px-5 py-3 border border-border/30 rounded-full",
-  socialProofItemHighlight: "border-primary/50 bg-primary/10 text-primary",
-  socialProofIcon: "text-primary text-xl",
+  subtitle: "text-base md:text-lg text-muted-foreground max-w-lg mb-6 leading-relaxed",
 
-  scroll: "absolute bottom-10 left-1/2 flex flex-col items-center gap-3 animate-bounce-slow z-20 cursor-pointer opacity-70 hover:opacity-100 transition-opacity",
-  scrollText: "text-[10px] tracking-[0.3em] text-foreground/60 uppercase font-heading",
-  scrollLine: "w-px h-12 bg-gradient-to-b from-primary to-transparent",
+  memorable: "border-l-4 border-primary pl-4 py-2 text-foreground/80 text-lg mb-8",
+
+  ctaWrapper: "flex flex-col sm:flex-row gap-3 mb-10",
+  ctaPrimary: "inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-4 font-heading text-lg tracking-wide hover:bg-primary/90 transition-colors",
+  ctaSecondary: "inline-flex items-center justify-center gap-2 border-2 border-foreground/30 text-foreground px-6 py-4 font-heading text-lg tracking-wide hover:border-primary hover:text-primary transition-colors",
+
+  stats: "flex gap-8 pt-6 border-t border-border",
+  statItem: "flex flex-col",
+  statValue: "font-heading text-3xl text-primary",
+  statLabel: "text-xs text-muted-foreground uppercase tracking-wide",
 };
 
 export function HeroSection() {
-  const scrollToContent = () => {
-    const nextSection = document.getElementById("o-nas");
-    if (nextSection) {
-      nextSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section className={s.section}>
-      {/* Background Image */}
       <div className={s.imageBg}>
         <Image
-          src="/real-4.jpg"
-          alt="TOM-ART realizacje"
+          src="/malcerHero.jpg"
+          alt="MAL-CER realizacje"
           fill
           className="object-cover"
           priority
           sizes="100vw"
-          quality={85}
         />
       </div>
       <div className={s.overlay} />
 
       <div className={s.container}>
         <div className={s.content}>
-          {/* Headline */}
           <h1 className={s.headline}>
-            Wykończenia z wyczuciem. <br className="hidden md:block" />
-            <span className={s.headlineAccent}>Krosno Odrzańskie.</span>
+            {heroContent.headline} <span className={s.headlineAccent}>{heroContent.headlineAccent}</span>
           </h1>
 
-          {/* Subtitle */}
           <p className={s.subtitle}>{heroContent.subheadline}</p>
 
-          {/* CTA Buttons */}
+          <p className={s.memorable}>{heroContent.memorable}</p>
+
           <div className={s.ctaWrapper}>
             <a href={siteConfig.phoneHref} className={s.ctaPrimary}>
-              <span className="material-symbols-outlined text-2xl">call</span>
-              <span>{heroContent.ctaPrimary.label}: {heroContent.ctaPrimary.phone}</span>
+              <span className="material-symbols-outlined text-xl">call</span>
+              {heroContent.ctaPrimary.label}: {heroContent.ctaPrimary.phone}
             </a>
             <a href={heroContent.ctaSecondary.href} className={s.ctaSecondary}>
               {heroContent.ctaSecondary.label}
-              <span className="material-symbols-outlined text-xl">arrow_downward</span>
+              <span className="material-symbols-outlined text-lg">south</span>
             </a>
           </div>
 
-          {/* Social Proof Bar */}
-          <div className={s.socialProofBar}>
-            {heroContent.socialProof.map((item, i) => {
-              const isHighlight = item.label.includes("Orły");
-              return (
-                <div key={i} className={`${s.socialProofItem} ${isHighlight ? s.socialProofItemHighlight : ''}`}>
-                  <span className={`material-symbols-outlined ${s.socialProofIcon}`}>
-                    {item.icon === "EmojiEvents" ? "emoji_events" :
-                     item.icon === "Star" ? "star" :
-                     item.icon === "Reviews" ? "reviews" : "location_on"}
-                  </span>
-                  <span className={isHighlight ? "font-bold" : ""}>{item.label}</span>
-                </div>
-              );
-            })}
+          <div className={s.stats}>
+            <div className={s.statItem}>
+              <span className={s.statValue}>15+</span>
+              <span className={s.statLabel}>lat doświadczenia</span>
+            </div>
+            <div className={s.statItem}>
+              <span className={s.statValue}>100+</span>
+              <span className={s.statLabel}>projektów</span>
+            </div>
+            <div className={s.statItem}>
+              <span className={s.statValue}>1</span>
+              <span className={s.statLabel}>wykonawca</span>
+            </div>
           </div>
         </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className={s.scroll} onClick={scrollToContent}>
-        <span className={s.scrollText}>Przewiń</span>
-        <div className={s.scrollLine} />
       </div>
     </section>
   );

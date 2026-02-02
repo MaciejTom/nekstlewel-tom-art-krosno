@@ -1,92 +1,75 @@
 "use client";
 
-import Image from "next/image";
 import { whyUsContent } from "@/lib/content";
 
 const s = {
-  section: "bg-secondary section-spacing relative overflow-hidden",
-  container: "container mx-auto px-6 relative z-10",
-  grid: "grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center",
+  section: "bg-card section-spacing",
 
-  content: "flex flex-col gap-8",
-  headline: "font-heading text-4xl sm:text-5xl md:text-6xl text-foreground h2-industrial",
-  description: "space-y-4",
-  paragraph: "text-body text-muted-foreground",
+  container: "container mx-auto px-6",
 
-  featuresGrid: "grid grid-cols-1 sm:grid-cols-2 gap-5 mt-8",
-  featureCard: "bg-background/50 p-6 border border-border/30 card-hover hover:border-primary/40 group transition-all duration-300",
-  featureCardHighlight: "bg-primary/5 border-primary/50 hover:bg-primary/10 hover:border-primary relative",
-  featureIcon: "icon-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors rounded-lg",
-  featureIconInner: "text-primary",
-  featureTitle: "font-heading text-lg text-foreground mb-2 group-hover:text-primary transition-colors",
-  featureDesc: "text-sm text-muted-foreground leading-relaxed",
-  
-  // Highlight badge for the award
-  awardBadge: "absolute -top-3 -right-3 z-10 bg-primary text-primary-foreground text-[10px] font-bold px-2 py-1 uppercase tracking-wider rounded-sm shadow-lg",
+  header: "text-center max-w-3xl mx-auto mb-12",
+  headline: "font-heading text-3xl sm:text-4xl md:text-5xl text-foreground h2-bar-center",
 
-  imageWrapper: "relative aspect-[4/3] lg:aspect-[3/4] group",
-  image: "object-cover transition-all duration-700 ease-in-out",
-  imageOverlay: "absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent z-10",
-  imageBorder: "absolute top-4 left-4 right-4 bottom-4 border border-primary/30 z-20 transition-all duration-500 group-hover:scale-95",
-  imageFrame: "absolute -bottom-6 -right-6 w-2/3 h-2/3 border-r-2 border-b-2 border-primary/20 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500",
+  grid: "grid grid-cols-1 lg:grid-cols-3 gap-6",
+
+  // Card styles
+  card: "group",
+  cardInner: "h-full bg-background border border-border p-6 lg:p-8 card-hover",
+
+  // Icon
+  cardIconWrapper: "mb-6",
+  cardIcon: "w-14 h-14 bg-primary flex items-center justify-center",
+  cardIconInner: "text-primary-foreground text-2xl",
+
+  cardTitle: "font-heading text-xl md:text-2xl text-foreground mb-3 group-hover:text-primary transition-colors",
+  cardDesc: "text-muted-foreground text-sm mb-6",
+
+  // Memorable quote
+  cardMemorable: "pt-4 border-t border-border",
+  cardMemorableText: "text-primary font-heading text-sm tracking-wide",
 };
 
 const iconMap: Record<string, string> = {
-  EmojiEvents: "emoji_events",
-  Star: "star",
-  Build: "build",
-  Palette: "palette",
+  Call: "call",
+  Layers: "layers",
+  LocationOn: "location_on",
 };
 
 export function WhyUsSection() {
   return (
-    <section id="o-nas" className={s.section}>
+    <section id="dlaczego" className={s.section}>
       <div className={s.container}>
+        {/* Header */}
+        <div className={s.header}>
+          <h2 className={s.headline}>{whyUsContent.headline}</h2>
+        </div>
+
+        {/* Features Grid */}
         <div className={s.grid}>
-          {/* Left Content */}
-          <div className={s.content}>
-            <h2 className={s.headline}>{whyUsContent.headline}</h2>
-
-            <div className={s.description}>
-              {whyUsContent.description.map((para, i) => (
-                <p key={i} className={s.paragraph}>{para}</p>
-              ))}
-            </div>
-
-            {/* Features Grid */}
-            <div className={s.featuresGrid}>
-              {whyUsContent.features.map((feature, i) => {
-                const isAward = feature.title.includes("Laureat");
-                return (
-                  <div key={i} className={`${s.featureCard} ${isAward ? s.featureCardHighlight : ''}`}>
-                    {isAward && <div className={s.awardBadge}>Wyróżnienie</div>}
-                    <div className={s.featureIcon}>
-                      <span className={`material-symbols-outlined text-2xl ${s.featureIconInner}`}>
-                        {iconMap[feature.icon] || "check_circle"}
-                      </span>
-                    </div>
-                    <h3 className={s.featureTitle}>{feature.title}</h3>
-                    <p className={s.featureDesc}>{feature.description}</p>
+          {whyUsContent.features.map((feature, i) => (
+            <div key={i} className={s.card}>
+              <div className={s.cardInner}>
+                {/* Icon */}
+                <div className={s.cardIconWrapper}>
+                  <div className={s.cardIcon}>
+                    <span className={`material-symbols-outlined ${s.cardIconInner}`}>
+                      {iconMap[feature.icon] || "check_circle"}
+                    </span>
                   </div>
-                );
-              })}
-            </div>
-          </div>
+                </div>
 
-          {/* Right Image */}
-          <div className={s.imageWrapper}>
-            <Image
-              src="/second.jpg"
-              alt="Elegancki dom z kolumnami - TOM-ART realizacja"
-              fill
-              className={s.image}
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              loading="lazy"
-            />
-            <div className={s.imageOverlay} />
-            <div className={s.imageBorder} />
-            <div className={s.imageFrame} />
-          </div>
+                <h3 className={s.cardTitle}>{feature.title}</h3>
+                <p className={s.cardDesc}>{feature.description}</p>
+
+                {/* Memorable */}
+                {feature.memorable && (
+                  <div className={s.cardMemorable}>
+                    <p className={s.cardMemorableText}>"{feature.memorable}"</p>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

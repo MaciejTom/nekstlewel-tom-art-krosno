@@ -4,30 +4,32 @@ import { useState } from "react";
 import { faqContent } from "@/lib/content";
 
 const s = {
-  section: "bg-background section-spacing",
+  section: "bg-secondary section-spacing",
+
   container: "container mx-auto px-6",
 
-  header: "text-center mb-14",
-  headline: "font-heading text-3xl md:text-4xl lg:text-5xl text-foreground h2-industrial-center",
+  header: "text-center max-w-3xl mx-auto mb-12",
+  headline: "font-heading text-3xl sm:text-4xl md:text-5xl text-foreground h2-bar-center",
 
   items: "max-w-3xl mx-auto space-y-3",
-  item: "border border-border/30 bg-card overflow-hidden transition-all duration-300 hover:border-border/50",
-  itemOpen: "border-primary/50 shadow-lg shadow-primary/5",
 
-  question: "w-full flex justify-between items-center p-5 md:p-6 text-left cursor-pointer hover:bg-secondary/30 transition-colors",
+  item: "group bg-background border border-border overflow-hidden transition-colors",
+  itemOpen: "border-primary",
+
+  question: "w-full flex justify-between items-center p-5 md:p-6 text-left cursor-pointer",
   questionText: "font-heading text-base md:text-lg text-foreground pr-4 transition-colors",
   questionTextOpen: "text-primary",
-  questionIcon: "w-9 h-9 md:w-10 md:h-10 bg-primary/10 flex items-center justify-center shrink-0 transition-all duration-300",
-  questionIconOpen: "bg-primary rotate-180",
-  questionIconInner: "text-primary transition-transform duration-300",
-  questionIconInnerOpen: "text-primary-foreground",
 
-  // Animated answer wrapper
+  questionIcon: "w-10 h-10 flex items-center justify-center shrink-0 transition-colors bg-muted",
+  questionIconOpen: "bg-primary",
+  questionIconInner: "text-muted-foreground text-lg transition-all duration-300",
+  questionIconInnerOpen: "text-primary-foreground rotate-180",
+
   answerWrapper: "grid transition-all duration-300 ease-out",
   answerWrapperClosed: "grid-rows-[0fr] opacity-0",
   answerWrapperOpen: "grid-rows-[1fr] opacity-100",
   answerInner: "overflow-hidden",
-  answer: "px-5 md:px-6 pb-5 md:pb-6 text-muted-foreground leading-relaxed text-base border-t border-border/20 pt-4",
+  answer: "px-5 md:px-6 pb-5 md:pb-6 text-muted-foreground text-sm md:text-base",
 };
 
 export function FaqSection() {
@@ -49,9 +51,6 @@ export function FaqSection() {
               <div
                 key={i}
                 className={`${s.item} ${isOpen ? s.itemOpen : ""}`}
-                style={{
-                  animationDelay: `${i * 50}ms`,
-                }}
               >
                 <button
                   className={s.question}
@@ -63,8 +62,7 @@ export function FaqSection() {
                   </span>
                   <div className={`${s.questionIcon} ${isOpen ? s.questionIconOpen : ""}`}>
                     <span
-                      className={`material-symbols-outlined text-xl ${isOpen ? s.questionIconInnerOpen : s.questionIconInner}`}
-                      style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
+                      className={`material-symbols-outlined ${s.questionIconInner} ${isOpen ? s.questionIconInnerOpen : ""}`}
                     >
                       expand_more
                     </span>

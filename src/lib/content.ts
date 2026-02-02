@@ -1,245 +1,273 @@
-// TOM-ART Content Data
-// Generated from output/4-content.md
+// MAL-CER Content Data
+// Generated from newContent.md
 
 export const siteConfig = {
-  name: "TOM-ART",
-  owner: "Tomasz Duda",
-  phone: "514 432 142",
-  phoneHref: "tel:+48514432142",
-  address: "Grobla 64, 66-600 Krosno Odrzańskie",
-  nip: "6731736836",
-  area: "Krosno Odrzańskie, powiat krośnieński, Gubin, Zielona Góra i okolice",
+  name: "MAL-CER",
+  owner: "Cezary Żelazowski",
+  phone: "782 068 013",
+  phoneHref: "tel:+48782068013",
+  email: "malcer123@op.pl",
+  address: "Szyby 26, 27-400 Ostrowiec Świętokrzyski",
+  nip: "PL 6612071885",
+  area: "Ostrowiec Świętokrzyski i okolice, woj. świętokrzyskie",
 };
 
 export const heroContent = {
-  headline: "Wykończenia z wyczuciem. Krosno Odrzańskie.",
+  headline: "Remont bez szukania pięciu wykonawców.",
+  headlineAccent: "Ostrowiec i okolice.",
   subheadline:
-    "Laureat Orłów Branży Budowlanej 2024. Ocena 8.9/10 od klientów. Od tynków po instalacje — jeden wykonawca zamiast pięciu.",
+    "Elewacje, wykończenia wnętrz, budowa domów. Jeden człowiek od pierwszej rozmowy do odbioru. Cezary Żelazowski, MAL-CER.",
+  memorable: "Jeden wykonawca. Jedna odpowiedzialność. Zero 'to nie moja działka'.",
   ctaPrimary: {
-    label: "Zadzwoń po bezpłatną wycenę",
-    phone: "514 432 142",
+    label: "Zadzwoń",
+    phone: "782 068 013",
   },
   ctaSecondary: {
     label: "Zobacz realizacje",
     href: "#realizacje",
   },
-  socialProof: [
-    { label: "Laureat Orły 2024", icon: "EmojiEvents" },
-    { label: "Krosno Odrzańskie i okolice", icon: "LocationOn" },
-    { label: "Ocena 8.9/10", icon: "Star" },
-  ],
 };
 
-export const whyUsContent = {
-  headline: "Nagrodzony za jakość. Sprawdzony przez klientów.",
-  description: [
-    "Orły Branży Budowlanej 2024 — to wyróżnienie, które dostaje się za realne efekty, nie za obietnice. Za każdym zleceniem stoi Tomasz Duda, właściciel TOM-ART, który osobiście pilnuje każdego detalu.",
-    "Ocena 8.9 na 10 od klientów mówi sama za siebie. Nie chodzi o marketing — chodzi o to, żeby po zakończeniu prac nie trzeba było niczego poprawiać.",
-    "Działam w Krosnie Odrzańskim i okolicach. Mieszkam tu, pracuję tu — łatwiej mi dotrzymać słowa, gdy spotykamy się na co dzień.",
+export const problemContent = {
+  headline: "Znasz to uczucie?",
+  paragraphs: [
+    "Tynkarz mówi że to wina elektryka. Elektryk że hydraulika. A Ty stoisz w środku mieszkania bez podłogi i z trzema fakturami za 'konsultacje'. Każdy robi swoje — nikt nie odpowiada za całość.",
+    "Robię remonty inaczej. Od fundamentu po ostatni kolor na ścianie — jeden wykonawca. Nie szukasz trzech ekip. Nie tłumaczysz tego samego trzy razy. Dzwonisz do mnie, ja koordynuję, ja odpowiadam za efekt.",
   ],
-  features: [
-    {
-      icon: "EmojiEvents",
-      title: "Laureat Orłów Branży Budowlanej 2024",
-      description:
-        "Nagroda branżowa za jakość wykonania. Nie każdy wykonawca może się tym pochwalić.",
-    },
-    {
-      icon: "Star",
-      title: "Ocena 8.9/10 od klientów",
-      description:
-        "15 opinii — i każda potwierdza, że robota jest zrobiona solidnie, na czas i na czysto.",
-    },
-    {
-      icon: "Build",
-      title: "Od A do Z — jeden wykonawca",
-      description:
-        "Tynki, posadzki, malowanie, elewacje, instalacje. Nie szukasz pięciu fachowców — wystarczy jeden telefon.",
-    },
-    {
-      icon: "Palette",
-      title: "Wykończenia z wyczuciem estetyki",
-      description:
-        "TOM-ART to nie tylko remont. To dbałość o detal, który sprawia, że efekt końcowy cieszy oczy.",
-    },
-  ],
+  memorable: "Nie wyceniam przez telefon. Bo to zawsze kłamstwo. Przyjadę, obejrzę, wtedy powiem ile.",
+  location: "Szyby 26 koło Ostrowca — wiesz gdzie mnie szukać.",
 };
 
 export const servicesContent = {
-  headline: "Od gładzi po elewację — pełen zakres wykończeniówki",
+  headline: "Od elewacji po wykończenie wnętrza",
   description:
-    "Specjalizuję się w pracach wykończeniowych i budowlanych. Doradze, co będzie najlepsze w Twoim przypadku — zadzwoń, porozmawiamy konkretnie.",
+    "Doradzę co da się zrobić w Twoim budżecie. Nie obiecuję gruszek na wierzbie — mówię jak jest.",
   services: [
     {
-      id: "tynki",
-      title: "Tynki maszynowe i ręczne",
-      subtitle: "Krosno Odrzańskie",
+      id: "wykonczenia",
+      title: "Wykończenia wnętrz",
+      subtitle: "gładzie, malowanie, podłogi",
       description:
-        "Równa, gładka powierzchnia to podstawa każdego wykończenia. Wykonam tynki cementowo-wapienne, gipsowe i gładzie pod malowanie.",
+        "Od surowych ścian do gotowego mieszkania. Gładzie, tynki, malowanie, panele, płytki. Jedno zlecenie, jeden wykonawca.",
       features: [
-        "Tynki maszynowe i ręczne",
-        "Gładzie gipsowe pod malowanie",
-        "Tynki dekoracyjne i strukturalne",
+        "Gładzie i tynki (równe ściany, gotowe pod malowanie)",
+        "Malowanie ścian i sufitów",
+        "Układanie paneli i płytek",
+        "Zabudowy karton-gips",
       ],
       icon: "FormatPaint",
     },
     {
-      id: "malowanie",
-      title: "Malowanie wnętrz i elewacji",
-      subtitle: "",
-      description:
-        "Od odświeżenia jednego pokoju po malowanie całego domu. Czysto, równo, z dbałością o detale.",
-      features: [
-        "Malowanie ścian i sufitów",
-        "Szpachlowanie i wyrównywanie",
-        "Malowanie elewacji",
-      ],
-      icon: "Brush",
-    },
-    {
-      id: "posadzki",
-      title: "Posadzki, panele, płytki",
-      subtitle: "Krosno Odrzańskie",
-      description:
-        "Dobiorę materiał do pomieszczenia i budżetu. Układam panele, płytki ceramiczne i posadzki betonowe.",
-      features: [
-        "Układanie paneli i desek",
-        "Płytki ceramiczne i gres",
-        "Posadzki wylewane",
-      ],
-      icon: "GridOn",
-    },
-    {
       id: "elewacje",
-      title: "Elewacje i docieplenia budynków",
-      subtitle: "",
+      title: "Elewacje i fasady",
+      subtitle: "tynki, docieplenia, renowacje",
       description:
-        "Elewacja to wizytówka domu. Wykonam docieplenie styropianem lub wełną, tynk elewacyjny i wykończenie z detalami.",
+        "Tynki elewacyjne, docieplenia, renowacja starszych budynków. Również zabytkowe kamienice — sztukaterie, detale, piaskowy tynk.",
       features: [
-        "Docieplenie styropianem i wełną",
-        "Tynki elewacyjne (silikonowe, akrylowe)",
-        "Detale architektoniczne i sztukaterie",
+        "Tynki elewacyjne i docieplenia",
+        "Renowacja fasad (w tym zabytkowych)",
+        "Sztukaterie i detale architektoniczne",
       ],
       icon: "Home",
     },
     {
-      id: "instalacje",
-      title: "Instalacje elektryczne i wodno-kanalizacyjne",
+      id: "budowlane",
+      title: "Prace budowlane",
+      subtitle: "konstrukcje, dachy, stan surowy",
+      description:
+        "Od wykopu po dach. Fundamenty, ściany, konstrukcje drewniane, montaż okien. Pełny cykl budowlany.",
+      features: [
+        "Fundamenty i ściany nośne",
+        "Konstrukcje dachowe (drewno)",
+        "Montaż okien i drzwi",
+        "Stan surowy zamknięty",
+      ],
+      icon: "Construction",
+    },
+    {
+      id: "domy",
+      title: "Budowa domów jednorodzinnych",
       subtitle: "",
       description:
-        "Nie musisz szukać osobnego elektryka czy hydraulika. Wykonam instalacje w ramach kompleksowego wykończenia.",
+        "Nowoczesne i tradycyjne domy jednorodzinne. Od projektu do klucza — jeden wykonawca na cały proces.",
       features: [
-        "Instalacje elektryczne",
-        "Instalacje wodno-kanalizacyjne",
-        "Instalacje grzewcze i klimatyzacyjne",
+        "Domy nowoczesne (duże przeszklenia, płaska elewacja)",
+        "Domy tradycyjne (cegła, dachówka)",
+        "Kompleksowa realizacja lub etapy",
       ],
-      icon: "ElectricalServices",
+      icon: "Villa",
+    },
+  ],
+};
+
+export const processContent = {
+  headline: "Zadzwoń — reszta to moja robota",
+  steps: [
+    {
+      number: "01",
+      title: "Rozmowa i oględziny",
+      description:
+        "Zadzwoń lub napisz. Umówimy się na oględziny — nie wyceniam na ślepo. Przyjadę, zobaczę, porozmawiamy o tym co chcesz osiągnąć.",
+    },
+    {
+      number: "02",
+      title: "Wycena na miejscu",
+      description:
+        "Po oględzinach dostajesz konkretną wycenę. Nie 'od-do', nie 'zobaczymy'. Ile kosztuje, co wchodzi w zakres, ile czasu zajmie.",
+    },
+    {
+      number: "03",
+      title: "Realizacja",
+      description:
+        "Wchodzę z materiałami i narzędziami. Pracuję sam lub z ekipą — zależy od skali. Raportuję postępy, reaguję na zmiany.",
+    },
+    {
+      number: "04",
+      title: "Odbiór",
+      description:
+        "Wspólny odbiór prac. Sprawdzamy każdy szczegół. Dopiero jak Ty mówisz 'OK' — zamykamy temat.",
+    },
+  ],
+  memorable: "Dopiero jak Ty mówisz OK — zamykamy temat.",
+};
+
+export const whyUsContent = {
+  headline: "Dlaczego akurat ja?",
+  features: [
+    {
+      icon: "Call",
+      title: "Dzwonisz do mnie, nie do biura",
+      description:
+        "Nie mam sekretarki, nie mam 'działu obsługi klienta'. Dzwonisz pod mój numer, ja odbieram. Ja wyceniam, ja wykonuję, ja odpowiadam za efekt. Zero pośredników.",
+      memorable: "Dzwonisz do mnie, nie do sekretarki której nie mam.",
+    },
+    {
+      icon: "Layers",
+      title: "Jeden wykonawca od A do Z",
+      description:
+        "Elewacje, wnętrza, konstrukcje, całe domy. Nie musisz koordynować trzech firm. Jeden telefon, jedna odpowiedzialność, jedno rozliczenie na końcu.",
+    },
+    {
+      icon: "LocationOn",
+      title: "Wiesz gdzie mnie szukać",
+      description:
+        "Szyby 26, 27-400 Ostrowiec Świętokrzyski. NIP: PL 6612071885. Nie znikam po robocie — masz adres, masz NIP, masz twarz. Jak coś nie tak — wiesz gdzie przyjechać.",
+      memorable: "Mam adres, NIP i twarz — wiesz gdzie mnie szukać.",
     },
   ],
 };
 
 export const portfolioContent = {
-  headline: "Realizacje — efekty mówią same za siebie",
-  description:
-    "Każde zlecenie traktuję indywidualnie. Oto wybrane prace z ostatnich miesięcy:",
+  headline: "Przykłady moich prac",
+  description: "",
   items: [
     {
-      id: "dom-klasyczny",
-      title: "Dom w stylu klasycznym",
+      id: "fasada-kamienicy",
+      title: "Fasada kamienicy",
       description:
-        "Elegancka biała elewacja z kolumnami, czerwona dachówka ceramiczna. Prace wykończeniowe w toku — solidne fundamenty estetyki.",
-      tags: ["elewacja", "klasyczny"],
+        "Renowacja elewacji zabytkowej kamienicy dwukondygnacyjnej. Piaskowy tynk, klasyczne sztukaterie, detale architektoniczne. Ostrowiec Świętokrzyski.",
+      tags: ["Elewacje"],
       image: "/real-1.jpg",
     },
     {
-      id: "remont-elewacji",
-      title: "Remont elewacji z ociepleniem",
+      id: "wykonczenie-wnetrza",
+      title: "Wykończenie wnętrza",
       description:
-        "Kompleksowa termomodernizacja — nowa elewacja biało-szara z drewnianymi panelami dekoracyjnymi. Dom nie do poznania.",
-      tags: ["elewacja", "remont"],
-      image: "/realizacjaKolejna.png",
+        "Wykończenie wnętrza z dekoracyjnymi panelami ściennymi i sztukaterią. Gładzie, przygotowanie pod podłogi. Eleganckie detale wykończeniowe.",
+      tags: ["Wnętrza"],
+      image: "/real-2.jpg",
     },
     {
-      id: "lazienka",
-      title: "Wykończenie łazienki",
+      id: "dom-nowoczesny",
+      title: "Dom nowoczesny",
       description:
-        "Nowoczesna łazienka z płytkami wielkoformatowymi, kabina prysznicowa, grzejnik drabinkowy. Pełne wykończenie pod klucz.",
-      tags: ["wnętrze", "wykończenie"],
-      image: "/nowe.png",
+        "Nowoczesny dom jednorodzinny — duże przeszklenia, ciemna elewacja z jasnym tynkiem, drewniana wiata. Kompleksowa realizacja.",
+      tags: ["Budowa domów"],
+      image: "/real-3.jpg",
     },
     {
-      id: "elewacja-zolta",
-      title: "Elewacja — odświeżenie fasady",
+      id: "dom-z-panelami",
+      title: "Dom z panelami",
       description:
-        "Świeża żółta elewacja z cokołem klinkierowym. Wymiana rynien, docieplenie i malowanie. Efekt: jak nowy dom.",
-      tags: ["elewacja", "malowanie"],
+        "Dom parterowy z panelami słonecznymi. Drewniane rolety, cokół z bloków kamiennych. Solidna, praktyczna konstrukcja.",
+      tags: ["Budowa domów"],
       image: "/real-4.jpg",
+    },
+    {
+      id: "konstrukcja-dachowa",
+      title: "Konstrukcja dachowa",
+      description:
+        "Drewniana konstrukcja dachu w trakcie budowy. Montaż okien PCV, przygotowanie do wykończenia.",
+      tags: ["Prace budowlane"],
+      image: "/hero1.jpg",
     },
   ],
   cta: {
     label: "Chcesz podobny efekt? Zadzwoń",
-    phone: "514 432 142",
+    phone: "782 068 013",
   },
 };
 
 export const faqContent = {
-  headline: "Często zadawane pytania",
+  headline: "Pytania i odpowiedzi",
   items: [
     {
-      question: "Jaki jest zakres usług TOM-ART?",
+      question: "Ile kosztuje remont mieszkania?",
       answer:
-        "Wykonuję prace wykończeniowe i budowlane — od tynków i gładzi, przez posadzki i malowanie, po elewacje i instalacje. Jeden wykonawca na cały zakres, bez potrzeby szukania kilku fachowców.",
+        "Zależy od metrażu, stanu i zakresu prac. Nie podaję widełek 'od-do' — bo to nic nie znaczy. Przyjadę, obejrzę, wycenię konkretnie. Wtedy wiesz ile i za co.",
     },
     {
-      question: "Ile kosztuje remont lub wykończenie?",
+      question: "Jak długo trwa remont?",
       answer:
-        "Każde zlecenie wyceniam indywidualnie po rozmowie o zakresie prac. Zadzwoń pod 514 432 142 — porozmawiamy konkretnie i podam orientacyjną cenę.",
+        "Też zależy od skali. Małe mieszkanie — 2-3 tygodnie. Dom od podstaw — kilka miesięcy. Harmonogram ustalamy przed startem i trzymam się terminów.",
     },
     {
-      question: "W jakim obszarze działa TOM-ART?",
+      question: "Czy masz opinie?",
       answer:
-        "Działam w Krosnie Odrzańskim i okolicach — powiat krośnieński, Gubin, Zielona Góra. Dojadę też dalej przy większych zleceniach.",
+        "Jeszcze nie w Google — firma jest nowa. Ale mam adres, NIP i twarz. Nie znikam po robocie — wiesz gdzie mnie szukać. Zadzwoń, porozmawiamy, zobaczysz jak pracuję.",
     },
     {
-      question: "Jak wygląda proces współpracy?",
+      question: "Jaki jest Twój obszar działania?",
       answer:
-        "Zadzwoń lub napisz. Umówimy się na oględziny, omówimy zakres i termin. Po akceptacji wyceny wchodzę z materiałami i narzędziami. Na koniec — wspólny odbiór.",
+        "Ostrowiec Świętokrzyski i okolice — okolice Szyb, całe województwo świętokrzyskie. W promieniu 40-50 km od bazy.",
     },
     {
-      question: "Czy TOM-ART ma nagrody lub certyfikaty?",
+      question: "Czy pracujesz sam czy z ekipą?",
       answer:
-        "Tak — jestem laureatem Orłów Branży Budowlanej 2024. To wyróżnienie przyznawane za jakość usług, potwierdzone opiniami klientów (ocena 8.9/10).",
+        "Zależy od skali zlecenia. Mniejsze prace — sam. Większe projekty — ściągam sprawdzonych ludzi. Ale zawsze ja koordynuję i odpowiadam za całość.",
     },
     {
-      question: "Czy mogę zobaczyć wcześniejsze realizacje?",
+      question: "Czy robisz wycenę przez telefon?",
       answer:
-        "Oczywiście. Zdjęcia wybranych prac znajdziesz na tej stronie w sekcji Realizacje. Chętnie też pokażę więcej na spotkaniu.",
+        "Nie. Nie wyceniam na ślepo — bo to zawsze kłamstwo. Przyjadę, obejrzę, wtedy powiem konkretnie ile. Tak uczciwie.",
     },
   ],
 };
 
 export const contactContent = {
-  headline: "Porozmawiajmy o Twoim remoncie",
+  headline: "Zadzwoń do Cezarego",
   description:
-    "Masz pytanie albo chcesz wycenę? Najszybciej przez telefon — odpowiadam od razu.",
+    "Nie czekaj na formularz. Zadzwoń, porozmawiamy. Reszta to moja robota.",
   details: {
-    phone: "514 432 142",
-    address: "Grobla 64, 66-600 Krosno Odrzańskie",
-    nip: "6731736836",
+    phone: "782 068 013",
+    email: "malcer123@op.pl",
+    address: "Szyby 26, 27-400 Ostrowiec Świętokrzyski",
+    nip: "PL 6612071885",
   },
-  area: "Krosno Odrzańskie, powiat krośnieński, Gubin, Zielona Góra i okolice.",
+  area: "Ostrowiec Świętokrzyski i okolice, woj. świętokrzyskie.",
   cta: {
-    headline: "Zadzwoń — wycenię prace tego samego dnia.",
-    description:
-      "Nie czekaj na maile. Jedna rozmowa wystarczy, żeby ustalić zakres i termin.",
-    buttonLabel: "Zadzwoń: 514 432 142",
+    headline: "Masz pytanie? Zadzwoń.",
+    description: "Nie czekaj na formularz. Zadzwoń, porozmawiamy.",
+    buttonLabel: "Zadzwoń teraz: 782 068 013",
   },
+  memorable: "Zadzwoń. Reszta to moja robota.",
 };
 
 // Navigation items
 export const navItems = [
-  { label: "O nas", href: "#o-nas" },
   { label: "Usługi", href: "#uslugi" },
+  { label: "Jak pracuję", href: "#proces" },
+  { label: "Dlaczego ja", href: "#dlaczego" },
   { label: "Realizacje", href: "#realizacje" },
   { label: "FAQ", href: "#faq" },
   { label: "Kontakt", href: "#kontakt" },

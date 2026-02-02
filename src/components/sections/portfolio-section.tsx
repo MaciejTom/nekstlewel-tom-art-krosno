@@ -4,44 +4,75 @@ import Image from "next/image";
 import { portfolioContent, siteConfig } from "@/lib/content";
 
 const s = {
-  section: "bg-secondary section-spacing relative",
+  section: "bg-background section-spacing",
+
   container: "container mx-auto px-6",
 
-  header: "flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8",
-  headline: "font-heading text-4xl sm:text-5xl md:text-6xl text-foreground h2-industrial",
-  description: "text-muted-foreground max-w-lg mt-6 leading-relaxed text-lg",
+  header: "text-center max-w-3xl mx-auto mb-12",
+  headline: "font-heading text-3xl sm:text-4xl md:text-5xl text-foreground h2-bar-center",
 
-  grid: "grid grid-cols-1 md:grid-cols-2 gap-8",
+  // Grid
+  grid: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
 
-  card: "relative group overflow-hidden aspect-[4/3] bg-card border border-border/20 hover:border-primary/50 transition-colors transition-shadow duration-500 ease-out rounded-sm shadow-lg hover:shadow-2xl",
-  cardImageWrapper: "absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105 will-change-transform",
-  cardImage: "object-cover",
-  cardOverlay: "absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent group-hover:from-black/70 group-hover:via-black/30 transition-all duration-500 ease-out",
-  cardContent: "absolute bottom-0 left-0 right-0 p-4 md:p-8 transition-transform duration-500 ease-out",
-  cardTitle: "font-heading text-xl md:text-3xl text-foreground mb-1 md:mb-3 group-hover:text-primary transition-colors duration-500 ease-out",
-  cardDesc: "text-xs md:text-sm text-gray-300 leading-relaxed mb-2 md:mb-5 line-clamp-2",
-  cardTags: "flex flex-wrap gap-1 md:gap-2",
-  cardTag: "px-3 py-1 bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider border border-primary/30 backdrop-blur-sm",
+  // Card
+  card: "group overflow-hidden bg-card border border-border hover:border-primary transition-colors",
+  cardImageWrapper: "relative aspect-[4/3] overflow-hidden",
+  cardImage: "object-cover transition-transform duration-500 group-hover:scale-105",
+  cardOverlay: "absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent",
 
-  cta: "mt-20 text-center",
-  ctaButton: "inline-flex items-center gap-3 bg-primary text-primary-foreground px-12 py-6 font-heading text-xl tracking-wider btn-hover animate-glow-pulse shadow-xl hover:shadow-primary/20",
+  // Content
+  cardContent: "absolute bottom-0 left-0 right-0 p-5",
+  cardTag: "inline-flex px-2 py-1 bg-primary text-primary-foreground text-xs font-bold uppercase tracking-wider mb-2",
+  cardTitle: "font-heading text-xl md:text-2xl text-foreground mb-2 leading-tight group-hover:text-primary transition-colors",
+  cardDesc: "text-sm text-muted-foreground line-clamp-2 leading-relaxed",
+
+  // Featured card (first item)
+  cardFeatured: "md:col-span-2 lg:col-span-2",
+  cardFeaturedImageWrapper: "relative aspect-[16/9] md:aspect-[2/1] overflow-hidden",
+
+  // CTA
+  ctaSection: "mt-12 text-center",
+  ctaButton: "inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 font-heading text-lg tracking-wide hover:bg-primary/90 transition-colors",
+  ctaIcon: "text-2xl",
 };
 
 export function PortfolioSection() {
+  const items = portfolioContent.items;
+  const featuredItem = items[0];
+  const otherItems = items.slice(1);
+
   return (
     <section id="realizacje" className={s.section}>
       <div className={s.container}>
         {/* Header */}
         <div className={s.header}>
-          <div>
-            <h2 className={s.headline}>{portfolioContent.headline}</h2>
-            <p className={s.description}>{portfolioContent.description}</p>
-          </div>
+          <h2 className={s.headline}>{portfolioContent.headline}</h2>
         </div>
 
         {/* Grid */}
         <div className={s.grid}>
-          {portfolioContent.items.map((item) => (
+          {/* Featured item */}
+          <div className={`${s.card} ${s.cardFeatured}`}>
+            <div className={s.cardFeaturedImageWrapper}>
+              <Image
+                src={featuredItem.image}
+                alt={featuredItem.title}
+                fill
+                className={s.cardImage}
+                sizes="(max-width: 768px) 100vw, 66vw"
+                loading="lazy"
+              />
+              <div className={s.cardOverlay} />
+            </div>
+            <div className={s.cardContent}>
+              <div className={s.cardTag}>{featuredItem.tags[0]}</div>
+              <h3 className={s.cardTitle}>{featuredItem.title}</h3>
+              <p className={s.cardDesc}>{featuredItem.description}</p>
+            </div>
+          </div>
+
+          {/* Other items */}
+          {otherItems.map((item) => (
             <div key={item.id} className={s.card}>
               <div className={s.cardImageWrapper}>
                 <Image
@@ -49,28 +80,24 @@ export function PortfolioSection() {
                   alt={item.title}
                   fill
                   className={s.cardImage}
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   loading="lazy"
                 />
+                <div className={s.cardOverlay} />
               </div>
-              <div className={s.cardOverlay} />
               <div className={s.cardContent}>
+                <div className={s.cardTag}>{item.tags[0]}</div>
                 <h3 className={s.cardTitle}>{item.title}</h3>
                 <p className={s.cardDesc}>{item.description}</p>
-                <div className={s.cardTags}>
-                  {item.tags.map((tag, i) => (
-                    <span key={i} className={s.cardTag}>{tag}</span>
-                  ))}
-                </div>
               </div>
             </div>
           ))}
         </div>
 
         {/* CTA */}
-        <div className={s.cta}>
+        <div className={s.ctaSection}>
           <a href={siteConfig.phoneHref} className={s.ctaButton}>
-            <span className="material-symbols-outlined text-3xl">call</span>
+            <span className={`material-symbols-outlined ${s.ctaIcon}`}>call</span>
             {portfolioContent.cta.label}: {portfolioContent.cta.phone}
           </a>
         </div>

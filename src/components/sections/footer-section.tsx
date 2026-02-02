@@ -3,7 +3,7 @@
 import { siteConfig, navItems } from "@/lib/content";
 
 const s = {
-  footer: "bg-background border-t border-border/20",
+  footer: "bg-card border-t border-border",
   container: "container mx-auto px-6",
 
   // Main grid - compact single row on desktop
@@ -11,13 +11,13 @@ const s = {
 
   // Logo - minimal
   logo: "flex items-center gap-2 group",
-  logoBox: "w-8 h-8 bg-primary flex items-center justify-center transition-transform group-hover:scale-105",
+  logoBox: "w-8 h-8 bg-primary flex items-center justify-center",
   logoLetter: "font-heading text-sm text-primary-foreground",
   logoText: "font-heading text-lg text-foreground",
 
   // Nav - horizontal, subtle
   nav: "flex flex-wrap justify-center gap-6",
-  navLink: "text-sm text-muted-foreground/70 hover:text-primary transition-colors",
+  navLink: "text-sm text-muted-foreground hover:text-primary transition-colors",
 
   // Contact inline
   contact: "flex items-center gap-4 text-sm",
@@ -25,7 +25,7 @@ const s = {
   contactIcon: "text-primary text-base",
 
   // Bottom bar - copyright
-  bottom: "py-4 border-t border-border/10 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-muted-foreground/50",
+  bottom: "py-4 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-muted-foreground",
 };
 
 export function FooterSection() {
@@ -39,9 +39,9 @@ export function FooterSection() {
           {/* Logo */}
           <a href="/" className={s.logo}>
             <div className={s.logoBox}>
-              <span className={s.logoLetter}>T</span>
+              <span className={s.logoLetter}>M</span>
             </div>
-            <span className={s.logoText}>TOM-ART</span>
+            <span className={s.logoText}>{siteConfig.name}</span>
           </a>
 
           {/* Navigation */}
@@ -58,6 +58,10 @@ export function FooterSection() {
             <a href={siteConfig.phoneHref} className={s.contactLink}>
               <span className={`material-symbols-outlined ${s.contactIcon}`}>call</span>
               {siteConfig.phone}
+            </a>
+            <a href={`mailto:${siteConfig.email}`} className={s.contactLink}>
+              <span className={`material-symbols-outlined ${s.contactIcon}`}>mail</span>
+              {siteConfig.email}
             </a>
           </div>
         </div>

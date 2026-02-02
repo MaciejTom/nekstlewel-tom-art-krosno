@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tom-art.pl/sitemap.xml
+Sitemap: https://mal-cer.pl/sitemap.xml

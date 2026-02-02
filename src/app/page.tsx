@@ -1,8 +1,10 @@
 import {
   NavSection,
   HeroSection,
-  WhyUsSection,
+  ProblemSection,
   ServicesSection,
+  ProcessSection,
+  WhyUsSection,
   PortfolioSection,
   FaqSection,
   ContactSection,
@@ -16,8 +18,10 @@ export default function HomePage() {
       <NavSection />
       <main>
         <HeroSection />
-        <WhyUsSection />
+        <ProblemSection />
         <ServicesSection />
+        <ProcessSection />
+        <WhyUsSection />
         <PortfolioSection />
         <FaqSection />
         <ContactSection />

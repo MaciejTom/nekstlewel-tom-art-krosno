@@ -19,19 +19,19 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
-  title: "TOM-ART | Wykończenia Krosno Odrzańskie | Laureat Orły 2024",
-  description: "TOM-ART Tomasz Duda — wykończenia i remonty w Krosnie Odrzańskim. Laureat Orłów Branży Budowlanej 2024. Ocena 8.9/10. Zadzwoń: 514 432 142.",
+  title: "Remonty Ostrowiec Świętokrzyski - MAL-CER Cezary Żelazowski",
+  description: "Remonty, wykończenia wnętrz, elewacje i budowa domów w Ostrowcu i okolicach. Jeden wykonawca od A do Z. Zadzwoń: 782 068 013.",
   openGraph: {
-    title: "TOM-ART | Wykończenia Krosno Odrzańskie",
-    description: "Laureat Orłów Branży Budowlanej 2024. Tynki, posadzki, malowanie, elewacje. Ocena 8.9/10 od klientów.",
+    title: "MAL-CER | Remonty Ostrowiec Świętokrzyski",
+    description: "Wykończenia wnętrz, elewacje, budowa domów. Jeden wykonawca od A do Z. Cezary Żelazowski.",
     type: "website",
     locale: "pl_PL",
-    siteName: "TOM-ART",
+    siteName: "MAL-CER",
   },
   twitter: {
     card: "summary_large_image",
-    title: "TOM-ART | Wykończenia Krosno Odrzańskie",
-    description: "Laureat Orłów Branży Budowlanej 2024. Tynki, posadzki, malowanie, elewacje.",
+    title: "MAL-CER | Remonty Ostrowiec Świętokrzyski",
+    description: "Wykończenia wnętrz, elewacje, budowa domów. Jeden wykonawca od A do Z.",
   },
 };
 

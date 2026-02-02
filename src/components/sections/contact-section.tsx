@@ -3,40 +3,52 @@
 import { contactContent, siteConfig } from "@/lib/content";
 
 const s = {
-  section: "bg-secondary section-spacing",
+  section: "bg-background section-spacing",
+
   container: "container mx-auto px-6",
-  grid: "grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20",
 
+  header: "text-center max-w-3xl mx-auto mb-12",
+
+  grid: "grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12",
+
+  // Left side
   left: "flex flex-col",
-  headline: "font-heading text-3xl md:text-4xl lg:text-5xl text-foreground h2-industrial mb-6",
-  description: "text-lg text-muted-foreground mb-10 leading-relaxed",
+  headline: "font-heading text-3xl sm:text-4xl md:text-5xl text-foreground mb-4 h2-bar",
+  description: "text-muted-foreground mb-8",
 
-  contactItems: "space-y-5",
-  contactItem: "flex items-center gap-5 group",
-  contactIcon: "icon-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors",
-  contactIconInner: "text-primary",
-  contactLabel: "text-sm text-muted-foreground mb-0.5",
-  contactValue: "text-lg text-foreground font-medium group-hover:text-primary transition-colors",
+  contactItems: "space-y-4",
+  contactItem: "group flex items-center gap-4 p-3 -mx-3 hover:bg-card transition-colors cursor-pointer",
+  contactIcon: "w-12 h-12 bg-primary flex items-center justify-center",
+  contactIconInner: "text-primary-foreground text-xl",
+  contactLabel: "text-xs text-muted-foreground uppercase tracking-wider",
+  contactValue: "text-lg text-foreground font-heading group-hover:text-primary transition-colors",
 
-  area: "mt-10 pt-8 border-t border-border/30",
-  areaLabel: "text-sm text-muted-foreground mb-2 uppercase tracking-wider",
-  areaValue: "text-foreground leading-relaxed",
+  area: "mt-8 pt-6 border-t border-border",
+  areaLabel: "text-xs text-muted-foreground mb-2 uppercase tracking-wider flex items-center gap-2",
+  areaIcon: "text-primary text-base",
+  areaValue: "text-foreground",
 
-  right: "bg-card border border-border/30 p-8 lg:p-12 relative overflow-hidden flex flex-col",
-  rightGlow: "absolute -top-20 -right-20 w-40 h-40 bg-primary/10 rounded-full blur-3xl",
-  ctaHeadline: "font-heading text-2xl md:text-3xl text-foreground mb-4 relative",
-  ctaDescription: "text-muted-foreground mb-6 leading-relaxed relative",
+  // Right side - CTA card
+  right: "",
+  rightCard: "bg-card border border-border p-6 lg:p-8 h-full",
 
-  // Map container
-  mapWrapper: "relative w-full h-64 mb-6 border border-border/30 overflow-hidden",
+  ctaHeadline: "font-heading text-2xl md:text-3xl text-foreground mb-3",
+  ctaDescription: "text-muted-foreground mb-6 text-sm",
+
+  // Memorable
+  memorable: "bg-secondary border-l-4 border-primary p-4 mb-6",
+  memorableText: "text-primary font-heading text-sm tracking-wide",
+
+  // Map
+  mapWrapper: "w-full h-56 lg:h-64 mb-6 border border-border overflow-hidden",
   map: "w-full h-full grayscale hover:grayscale-0 transition-all duration-500",
 
-  ctaButton: "w-full inline-flex items-center justify-center gap-4 bg-primary text-primary-foreground px-8 py-6 font-heading text-xl tracking-wider btn-hover btn-primary-glow relative mt-auto",
+  ctaButton: "w-full inline-flex items-center justify-center gap-3 bg-primary text-primary-foreground px-6 py-4 font-heading text-lg tracking-wide hover:bg-primary/90 transition-colors",
+  ctaButtonIcon: "text-2xl",
 };
 
 export function ContactSection() {
-  // Krosno Odrzańskie, Grobla 64 coordinates
-  const mapSrc = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2456.8!2d15.0986!3d52.0547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTLCsDAzJzE3LjAiTiAxNcKwMDUnNTUuMCJF!5e0!3m2!1spl!2spl!4v1700000000000!5m2!1spl!2spl&q=Grobla+64,+Krosno+Odrza%C5%84skie";
+  const mapSrc = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2500!2d21.38!3d50.95!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDU3JzAwLjAiTiAyMcKwMjInNDguMCJF!5e0!3m2!1spl!2spl!4v1700000000000!5m2!1spl!2spl&q=Szyby+26,+Ostrowiec+%C5%9Awi%C4%99tokrzyski";
 
   return (
     <section id="kontakt" className={s.section}>
@@ -50,19 +62,27 @@ export function ContactSection() {
             <div className={s.contactItems}>
               <a href={siteConfig.phoneHref} className={s.contactItem}>
                 <div className={s.contactIcon}>
-                  <span className={`material-symbols-outlined text-2xl ${s.contactIconInner}`}>call</span>
+                  <span className={`material-symbols-outlined ${s.contactIconInner}`}>call</span>
                 </div>
                 <div>
                   <div className={s.contactLabel}>Telefon</div>
-                  <div className={s.contactValue}>
-                    {contactContent.details.phone}
-                  </div>
+                  <div className={s.contactValue}>{contactContent.details.phone}</div>
+                </div>
+              </a>
+
+              <a href={`mailto:${contactContent.details.email}`} className={s.contactItem}>
+                <div className={s.contactIcon}>
+                  <span className={`material-symbols-outlined ${s.contactIconInner}`}>mail</span>
+                </div>
+                <div>
+                  <div className={s.contactLabel}>Email</div>
+                  <div className={s.contactValue}>{contactContent.details.email}</div>
                 </div>
               </a>
 
               <div className={s.contactItem}>
                 <div className={s.contactIcon}>
-                  <span className={`material-symbols-outlined text-2xl ${s.contactIconInner}`}>location_on</span>
+                  <span className={`material-symbols-outlined ${s.contactIconInner}`}>location_on</span>
                 </div>
                 <div>
                   <div className={s.contactLabel}>Adres</div>
@@ -72,7 +92,7 @@ export function ContactSection() {
 
               <div className={s.contactItem}>
                 <div className={s.contactIcon}>
-                  <span className={`material-symbols-outlined text-2xl ${s.contactIconInner}`}>badge</span>
+                  <span className={`material-symbols-outlined ${s.contactIconInner}`}>badge</span>
                 </div>
                 <div>
                   <div className={s.contactLabel}>NIP</div>
@@ -82,33 +102,42 @@ export function ContactSection() {
             </div>
 
             <div className={s.area}>
-              <div className={s.areaLabel}>Obszar działania</div>
+              <div className={s.areaLabel}>
+                <span className={`material-symbols-outlined ${s.areaIcon}`}>map</span>
+                Obszar działania
+              </div>
               <div className={s.areaValue}>{contactContent.area}</div>
             </div>
           </div>
 
-          {/* Right - CTA Card with Map */}
+          {/* Right - CTA Card */}
           <div className={s.right}>
-            <div className={s.rightGlow} />
-            <h3 className={s.ctaHeadline}>{contactContent.cta.headline}</h3>
-            <p className={s.ctaDescription}>{contactContent.cta.description}</p>
+            <div className={s.rightCard}>
+              <h3 className={s.ctaHeadline}>{contactContent.cta.headline}</h3>
+              <p className={s.ctaDescription}>{contactContent.cta.description}</p>
 
-            {/* Google Map */}
-            <div className={s.mapWrapper}>
-              <iframe
-                src={mapSrc}
-                className={s.map}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Lokalizacja TOM-ART"
-              />
+              {/* Memorable */}
+              <div className={s.memorable}>
+                <p className={s.memorableText}>"{contactContent.memorable}"</p>
+              </div>
+
+              {/* Map */}
+              <div className={s.mapWrapper}>
+                <iframe
+                  src={mapSrc}
+                  className={s.map}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Lokalizacja MAL-CER"
+                />
+              </div>
+
+              <a href={siteConfig.phoneHref} className={s.ctaButton}>
+                <span className={`material-symbols-outlined ${s.ctaButtonIcon}`}>call</span>
+                {contactContent.cta.buttonLabel}
+              </a>
             </div>
-
-            <a href={siteConfig.phoneHref} className={s.ctaButton}>
-              <span className="material-symbols-outlined text-3xl">call</span>
-              {contactContent.cta.buttonLabel}
-            </a>
           </div>
         </div>
       </div>
