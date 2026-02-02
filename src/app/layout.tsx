@@ -19,8 +19,20 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
-  title: "TOM-ART | Usługi remontowo-budowlane Krosno Odrzańskie",
-  description: "Od ścian po podłogi — pełen zakres prac remontowych. Tynki, posadzki, malowanie, murarstwo, izolacje. Krosno Odrzańskie i okolice.",
+  title: "TOM-ART | Wykończenia Krosno Odrzańskie | Laureat Orły 2024",
+  description: "TOM-ART Tomasz Duda — wykończenia i remonty w Krosnie Odrzańskim. Laureat Orłów Branży Budowlanej 2024. Ocena 8.9/10. Zadzwoń: 514 432 142.",
+  openGraph: {
+    title: "TOM-ART | Wykończenia Krosno Odrzańskie",
+    description: "Laureat Orłów Branży Budowlanej 2024. Tynki, posadzki, malowanie, elewacje. Ocena 8.9/10 od klientów.",
+    type: "website",
+    locale: "pl_PL",
+    siteName: "TOM-ART",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TOM-ART | Wykończenia Krosno Odrzańskie",
+    description: "Laureat Orłów Branży Budowlanej 2024. Tynki, posadzki, malowanie, elewacje.",
+  },
 };
 
 export default function RootLayout({

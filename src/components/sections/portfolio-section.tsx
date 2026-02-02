@@ -13,13 +13,14 @@ const s = {
 
   grid: "grid grid-cols-1 md:grid-cols-2 gap-8",
 
-  card: "relative group overflow-hidden aspect-[4/3] bg-card border border-border/20 hover:border-primary/50 transition-all duration-500 rounded-sm shadow-lg hover:shadow-2xl",
-  cardImage: "object-cover transition-transform duration-700 ease-out group-hover:scale-110 will-change-transform",
-  cardOverlay: "absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500",
-  cardContent: "absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out",
-  cardTitle: "font-heading text-2xl md:text-3xl text-foreground mb-3 group-hover:text-primary transition-colors duration-300",
-  cardDesc: "text-sm text-gray-300 leading-relaxed mb-5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-2 translate-y-2 group-hover:translate-y-0",
-  cardTags: "flex flex-wrap gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200",
+  card: "relative group overflow-hidden aspect-[4/3] bg-card border border-border/20 hover:border-primary/50 transition-colors transition-shadow duration-500 ease-out rounded-sm shadow-lg hover:shadow-2xl",
+  cardImageWrapper: "absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105 will-change-transform",
+  cardImage: "object-cover",
+  cardOverlay: "absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500 ease-out",
+  cardContent: "absolute bottom-0 left-0 right-0 p-8 translate-y-2 group-hover:translate-y-0 transition-transform duration-500 ease-out",
+  cardTitle: "font-heading text-2xl md:text-3xl text-foreground mb-3 group-hover:text-primary transition-colors duration-500 ease-out",
+  cardDesc: "text-sm text-gray-300 leading-relaxed mb-5 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out line-clamp-2",
+  cardTags: "flex flex-wrap gap-2 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out delay-100",
   cardTag: "px-3 py-1 bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider border border-primary/30 backdrop-blur-sm",
 
   cta: "mt-20 text-center",
@@ -42,12 +43,16 @@ export function PortfolioSection() {
         <div className={s.grid}>
           {portfolioContent.items.map((item) => (
             <div key={item.id} className={s.card}>
-              <Image
-                src={item.image}
-                alt={item.title}
-                fill
-                className={s.cardImage}
-              />
+              <div className={s.cardImageWrapper}>
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className={s.cardImage}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  loading="lazy"
+                />
+              </div>
               <div className={s.cardOverlay} />
               <div className={s.cardContent}>
                 <h3 className={s.cardTitle}>{item.title}</h3>

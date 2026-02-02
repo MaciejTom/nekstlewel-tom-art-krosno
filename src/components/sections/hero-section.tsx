@@ -5,7 +5,7 @@ import { heroContent, siteConfig } from "@/lib/content";
 
 const s = {
   section: "min-h-screen flex items-center relative bg-background pt-20 overflow-hidden",
-  overlay: "absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40 z-10",
+  overlay: "absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-background/20 z-10",
   imageBg: "absolute inset-0 animate-subtle-zoom",
   container: "container mx-auto px-6 py-16 lg:py-24 relative z-20",
   content: "max-w-4xl",
@@ -47,6 +47,8 @@ export function HeroSection() {
           fill
           className="object-cover"
           priority
+          sizes="100vw"
+          quality={85}
         />
       </div>
       <div className={s.overlay} />

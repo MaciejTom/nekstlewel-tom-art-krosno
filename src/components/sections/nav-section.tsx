@@ -43,7 +43,7 @@ export function NavSection() {
       <nav className={`${s.nav} ${scrolled ? s.navScrolled : s.navTop}`}>
         <div className={s.container}>
           {/* Logo */}
-          <a href="#" className={s.logo}>
+          <a href="/" className={s.logo}>
             <div className={s.logoIcon}>
               <span className="font-heading text-xl text-primary-foreground">T</span>
             </div>

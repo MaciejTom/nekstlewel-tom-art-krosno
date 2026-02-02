@@ -37,7 +37,7 @@ export function FooterSection() {
         {/* Main Row */}
         <div className={s.main}>
           {/* Logo */}
-          <a href="#" className={s.logo}>
+          <a href="/" className={s.logo}>
             <div className={s.logoBox}>
               <span className={s.logoLetter}>T</span>
             </div>

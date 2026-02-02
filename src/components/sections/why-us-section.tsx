@@ -59,7 +59,7 @@ export function WhyUsSection() {
                 const isAward = feature.title.includes("Laureat");
                 return (
                   <div key={i} className={`${s.featureCard} ${isAward ? s.featureCardHighlight : ''}`}>
-                    {isAward && <div className={s.awardBadge}>Top Choice</div>}
+                    {isAward && <div className={s.awardBadge}>Wyróżnienie</div>}
                     <div className={s.featureIcon}>
                       <span className={`material-symbols-outlined text-2xl ${s.featureIconInner}`}>
                         {iconMap[feature.icon] || "check_circle"}
@@ -80,6 +80,8 @@ export function WhyUsSection() {
               alt="Elegancki dom z kolumnami - TOM-ART realizacja"
               fill
               className={s.image}
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              loading="lazy"
             />
             <div className={s.imageOverlay} />
             <div className={s.imageBorder} />
