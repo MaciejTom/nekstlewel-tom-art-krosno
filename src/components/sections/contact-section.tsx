@@ -22,14 +22,22 @@ const s = {
   areaLabel: "text-sm text-muted-foreground mb-2 uppercase tracking-wider",
   areaValue: "text-foreground leading-relaxed",
 
-  right: "bg-card border border-border/30 p-8 lg:p-12 relative overflow-hidden",
+  right: "bg-card border border-border/30 p-8 lg:p-12 relative overflow-hidden flex flex-col",
   rightGlow: "absolute -top-20 -right-20 w-40 h-40 bg-primary/10 rounded-full blur-3xl",
   ctaHeadline: "font-heading text-2xl md:text-3xl text-foreground mb-4 relative",
-  ctaDescription: "text-muted-foreground mb-8 leading-relaxed relative",
-  ctaButton: "w-full inline-flex items-center justify-center gap-4 bg-primary text-primary-foreground px-8 py-6 font-heading text-xl tracking-wider btn-hover btn-primary-glow relative",
+  ctaDescription: "text-muted-foreground mb-6 leading-relaxed relative",
+
+  // Map container
+  mapWrapper: "relative w-full h-64 mb-6 border border-border/30 overflow-hidden",
+  map: "w-full h-full grayscale hover:grayscale-0 transition-all duration-500",
+
+  ctaButton: "w-full inline-flex items-center justify-center gap-4 bg-primary text-primary-foreground px-8 py-6 font-heading text-xl tracking-wider btn-hover btn-primary-glow relative mt-auto",
 };
 
 export function ContactSection() {
+  // Krosno Odrzańskie, Grobla 64 coordinates
+  const mapSrc = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2456.8!2d15.0986!3d52.0547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTLCsDAzJzE3LjAiTiAxNcKwMDUnNTUuMCJF!5e0!3m2!1spl!2spl!4v1700000000000!5m2!1spl!2spl&q=Grobla+64,+Krosno+Odrza%C5%84skie";
+
   return (
     <section id="kontakt" className={s.section}>
       <div className={s.container}>
@@ -79,11 +87,24 @@ export function ContactSection() {
             </div>
           </div>
 
-          {/* Right - CTA Card */}
+          {/* Right - CTA Card with Map */}
           <div className={s.right}>
             <div className={s.rightGlow} />
             <h3 className={s.ctaHeadline}>{contactContent.cta.headline}</h3>
             <p className={s.ctaDescription}>{contactContent.cta.description}</p>
+
+            {/* Google Map */}
+            <div className={s.mapWrapper}>
+              <iframe
+                src={mapSrc}
+                className={s.map}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Lokalizacja TOM-ART"
+              />
+            </div>
+
             <a href={siteConfig.phoneHref} className={s.ctaButton}>
               <span className="material-symbols-outlined text-3xl">call</span>
               {contactContent.cta.buttonLabel}

@@ -10,7 +10,6 @@ import {
   wireframePortfolio4n,
   wireframePortfolio6n,
 } from "@/content/wireframe/portfolio"
-import { tomArtPortfolio } from "@/content/tom-art/portfolio"
 
 export default function PortfolioPage() {
   return (
@@ -48,7 +47,7 @@ export default function PortfolioPage() {
         {/* Styled */}
         <SectionGroup title="Styled">
           <ComponentLabel label="PortfolioSection — framer-motion, corner accents" variant="styled" />
-          <PortfolioSection content={tomArtPortfolio} />
+          <PortfolioSection />
         </SectionGroup>
       </main>
     </div>

@@ -157,7 +157,7 @@ export const portfolioContent = {
       description:
         "Kompleksowa termomodernizacja — nowa elewacja biało-szara z drewnianymi panelami dekoracyjnymi. Dom nie do poznania.",
       tags: ["elewacja", "remont"],
-      image: "/real-2.jpg",
+      image: "/realizacjaKolejna.png",
     },
     {
       id: "lazienka",
@@ -165,7 +165,7 @@ export const portfolioContent = {
       description:
         "Nowoczesna łazienka z płytkami wielkoformatowymi, kabina prysznicowa, grzejnik drabinkowy. Pełne wykończenie pod klucz.",
       tags: ["wnętrze", "wykończenie"],
-      image: "/real-3.jpg",
+      image: "/nowe.png",
     },
     {
       id: "elewacja-zolta",
