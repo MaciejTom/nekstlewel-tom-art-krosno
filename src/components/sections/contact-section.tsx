@@ -1,7 +1,7 @@
 "use client";
 
 import { contactContent, siteConfig } from "@/lib/content";
-import { IconCall, IconMail, IconLocation } from "@/components/ui/icons";
+import { IconCall, IconMail, IconLocation, IconBadge, IconMap } from "@/components/ui/icons";
 
 const s = {
   section: "bg-background section-spacing",
@@ -93,7 +93,7 @@ export function ContactSection() {
 
               <div className={s.contactItem}>
                 <div className={s.contactIcon}>
-                  <IconLocation className="w-5 h-5 text-primary-foreground" />
+                  <IconBadge className="w-5 h-5 text-primary-foreground" />
                 </div>
                 <div>
                   <div className={s.contactLabel}>NIP</div>
@@ -104,7 +104,7 @@ export function ContactSection() {
 
             <div className={s.area}>
               <div className={s.areaLabel}>
-                <IconLocation className="w-4 h-4 text-primary" />
+                <IconMap className="w-4 h-4 text-primary" />
                 Obszar działania
               </div>
               <div className={s.areaValue}>{contactContent.area}</div>
