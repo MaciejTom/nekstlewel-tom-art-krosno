@@ -167,7 +167,7 @@ export const portfolioContent = {
       description:
         "Nowoczesny dom parterowy — jasna elewacja, ciemna stolarka, wiata garażowa. Kompleksowa realizacja od fundamentów do wykończenia.",
       tags: ["Budowa domów"],
-      image: "/real-1.jpg",
+      image: "/malcer-1.jpg",
     },
     {
       id: "fasada-kamienicy",
@@ -175,7 +175,7 @@ export const portfolioContent = {
       description:
         "Renowacja elewacji zabytkowej kamienicy dwukondygnacyjnej. Piaskowy tynk, klasyczne sztukaterie, detale architektoniczne.",
       tags: ["Elewacje"],
-      image: "/real-2.jpg",
+      image: "/malcer-2.jpg",
     },
     {
       id: "dom-parterowy",
@@ -183,7 +183,7 @@ export const portfolioContent = {
       description:
         "Dom parterowy z garażem i wiatą. Jasna elewacja, ciemna dachówka, estetyczne wykończenie terenu.",
       tags: ["Budowa domów"],
-      image: "/real-3.jpg",
+      image: "/malcer-3.jpg",
     },
     {
       id: "docieplenie",
@@ -191,7 +191,7 @@ export const portfolioContent = {
       description:
         "Kompleksowe docieplenie budynku wielorodzinnego. Wełna mineralna, rusztowania, profesjonalny montaż.",
       tags: ["Elewacje"],
-      image: "/real-4.jpg",
+      image: "/malcer-4.jpg",
     },
     {
       id: "remont-wnetrza",
@@ -199,7 +199,7 @@ export const portfolioContent = {
       description:
         "Generalny remont starego budynku. Wymiana stropów, instalacji, przygotowanie pod wykończenie.",
       tags: ["Wykończenia"],
-      image: "/real-5.jpg",
+      image: "/malcer-5.jpg",
     },
   ],
   cta: {
