@@ -15,7 +15,7 @@ const s = {
   grid: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
 
   // Card
-  card: "group overflow-hidden bg-card border border-border hover:border-primary transition-colors",
+  card: "group relative overflow-hidden bg-card border border-border hover:border-primary transition-colors",
   cardImageWrapper: "relative aspect-[4/3] overflow-hidden",
   cardImage: "object-cover transition-transform duration-500 group-hover:scale-105",
   cardOverlay: "absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent",

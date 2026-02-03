@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { servicesContent, siteConfig } from "@/lib/content";
 
 const s = {
@@ -12,14 +13,16 @@ const s = {
 
   grid: "grid grid-cols-1 md:grid-cols-2 gap-6",
 
-  card: "bg-card border border-border p-6 md:p-8 card-hover",
-  cardHeader: "flex items-start justify-between mb-4",
-  cardIcon: "w-12 h-12 bg-primary flex items-center justify-center",
-  cardNumber: "font-heading text-4xl text-border",
+  card: "group bg-card border border-border overflow-hidden card-hover",
+  cardImage: "relative aspect-[16/10] overflow-hidden",
+  cardImageInner: "object-cover transition-transform duration-500 group-hover:scale-105",
+  cardOverlay: "absolute inset-0 bg-gradient-to-t from-background/60 to-transparent",
+  cardNumber: "absolute top-4 right-4 font-heading text-5xl text-white/30",
 
-  cardTitle: "font-heading text-xl md:text-2xl text-foreground mb-1",
+  cardContent: "p-6",
+  cardTitle: "font-heading text-xl md:text-2xl text-foreground mb-1 group-hover:text-primary transition-colors",
   cardSubtitle: "text-sm text-primary uppercase tracking-wide mb-3",
-  cardDesc: "text-muted-foreground text-sm mb-6",
+  cardDesc: "text-muted-foreground text-sm mb-4",
 
   featureList: "space-y-2 pt-4 border-t border-border",
   featureItem: "flex items-start gap-2 text-sm text-muted-foreground",
@@ -32,12 +35,12 @@ const s = {
   ctaButton: "inline-flex items-center gap-3 bg-background text-foreground px-8 py-4 font-heading text-lg tracking-wide hover:bg-foreground hover:text-background transition-colors",
 };
 
-const iconMap: Record<string, string> = {
-  FormatPaint: "format_paint",
-  Home: "home",
-  Construction: "construction",
-  Villa: "villa",
-};
+const serviceImages = [
+  "/service1.jpg",
+  "/serv2.jpg",
+  "/serv3.jpg",
+  "/serv4.jpg",
+];
 
 export function ServicesSection() {
   const { services } = servicesContent;
@@ -53,27 +56,32 @@ export function ServicesSection() {
         <div className={s.grid}>
           {services.map((service, index) => (
             <div key={service.id} className={s.card}>
-              <div className={s.cardHeader}>
-                <div className={s.cardIcon}>
-                  <span className="material-symbols-outlined text-2xl text-primary-foreground">
-                    {iconMap[service.icon] || "build"}
-                  </span>
-                </div>
+              <div className={s.cardImage}>
+                <Image
+                  src={serviceImages[index]}
+                  alt={service.title}
+                  fill
+                  className={s.cardImageInner}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className={s.cardOverlay} />
                 <span className={s.cardNumber}>0{index + 1}</span>
               </div>
 
-              <h3 className={s.cardTitle}>{service.title}</h3>
-              {service.subtitle && <p className={s.cardSubtitle}>{service.subtitle}</p>}
-              <p className={s.cardDesc}>{service.description}</p>
+              <div className={s.cardContent}>
+                <h3 className={s.cardTitle}>{service.title}</h3>
+                {service.subtitle && <p className={s.cardSubtitle}>{service.subtitle}</p>}
+                <p className={s.cardDesc}>{service.description}</p>
 
-              <ul className={s.featureList}>
-                {service.features.map((feature, i) => (
-                  <li key={i} className={s.featureItem}>
-                    <span className="material-symbols-outlined text-primary text-base">check</span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+                <ul className={s.featureList}>
+                  {service.features.map((feature, i) => (
+                    <li key={i} className={s.featureItem}>
+                      <span className="material-symbols-outlined text-primary text-base">check</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
         </div>
