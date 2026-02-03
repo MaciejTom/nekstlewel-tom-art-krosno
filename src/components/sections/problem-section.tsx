@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import { problemContent } from "@/lib/content";
+import { IconLocation } from "@/components/ui/icons";
 
 const s = {
-  section: "relative py-16 md:py-20",
+  section: "relative pt-24 pb-16 md:pt-32 md:pb-20",
 
   bgWrapper: "absolute inset-0",
   bgOverlay: "absolute inset-0 bg-background/95",
@@ -55,7 +56,7 @@ export function ProblemSection() {
           </div>
 
           <p className={s.location}>
-            <span className="material-symbols-outlined text-primary">location_on</span>
+            <IconLocation className="w-5 h-5 text-primary" />
             {problemContent.location}
           </p>
         </div>
