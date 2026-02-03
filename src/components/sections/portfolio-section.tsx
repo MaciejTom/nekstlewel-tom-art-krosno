@@ -80,6 +80,7 @@ export function PortfolioSection() {
                   alt={item.title}
                   fill
                   className={s.cardImage}
+                  style={item.imagePosition ? { objectPosition: item.imagePosition } : undefined}
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   loading="lazy"
                 />

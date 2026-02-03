@@ -7,19 +7,16 @@ const reasons = [
     title: "DZWONISZ DO MNIE",
     description: "Nie mam sekretarki, nie mam 'działu obsługi klienta'. Dzwonisz pod mój numer, ja odbieram. Ja wyceniam, ja wykonuję, ja odpowiadam za efekt.",
     image: "/icon-phone.png",
-    hasImage: true,
   },
   {
     title: "JEDEN WYKONAWCA",
     description: "Elewacje, wnętrza, konstrukcje, całe domy. Nie musisz koordynować trzech firm. Jeden telefon, jedna odpowiedzialność, jedno rozliczenie.",
-    icon: "layers",
-    hasImage: false,
+    image: "/icon-layers.png",
   },
   {
     title: "WIESZ GDZIE SZUKAĆ",
     description: "Szyby 26, Ostrowiec Świętokrzyski. NIP: PL 6612071885. Nie znikam po robocie — masz adres, masz NIP, masz twarz.",
     image: "/icon-location.png",
-    hasImage: true,
   },
 ];
 
@@ -58,26 +55,25 @@ export function WhyUsAlternative() {
               key={index}
               className="group relative p-6 transition-all duration-300 flex flex-col items-center text-center"
             >
-              {/* Icon Container with Glow */}
-              <div className="relative w-48 h-48 md:w-56 md:h-56 mb-8 flex items-center justify-center">
+              {/* Icon Container with 3D Layered Borders */}
+              <div className="relative w-[350px] h-[350px] mb-8 flex items-center justify-center">
+                {/* Glow on hover */}
                 <div className="absolute inset-0 bg-primary/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                {item.hasImage ? (
-                  <div className="relative w-40 h-40 md:w-48 md:h-48 transition-transform duration-300 group-hover:scale-105">
-                    <Image
-                      src={item.image!}
-                      alt={item.title}
-                      fill
-                      className="object-contain"
-                      unoptimized
-                    />
-                  </div>
-                ) : (
-                  <div className="w-40 h-40 md:w-48 md:h-48 bg-card border border-border flex items-center justify-center transition-all duration-300 group-hover:border-primary group-hover:scale-105">
-                    <span className="material-symbols-outlined text-7xl md:text-8xl text-primary">
-                      {item.icon}
-                    </span>
-                  </div>
-                )}
+
+                {/* 3D stacked borders behind */}
+                <div className="absolute w-[320px] h-[320px] border border-primary/15 translate-x-4 translate-y-4 group-hover:border-primary/30 transition-all duration-300" />
+                <div className="absolute w-[320px] h-[320px] border border-primary/25 translate-x-2 translate-y-2 group-hover:border-primary/50 transition-all duration-300" />
+
+                {/* Main frame with image */}
+                <div className="relative w-[320px] h-[320px] border border-primary">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
+                </div>
               </div>
 
               <h3 className="font-heading text-xl md:text-2xl text-foreground mb-4 group-hover:text-primary transition-colors">
