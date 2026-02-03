@@ -22,7 +22,7 @@ const reasons = [
 
 export function WhyUsAlternative() {
   return (
-    <section className="bg-secondary py-20 md:py-24 relative overflow-hidden">
+    <section id="dlaczego" className="bg-secondary py-20 md:py-24 relative overflow-hidden">
       {/* Background Grid */}
       <div
         className="absolute inset-0 z-0 opacity-[0.03]"
@@ -90,11 +90,11 @@ export function WhyUsAlternative() {
         {/* CTA */}
         <div className="mt-16 text-center">
           <a
-            href="#kontakt"
-            className="inline-flex items-center gap-2 border-2 border-border text-foreground px-8 py-4 font-heading text-sm tracking-widest uppercase hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
+            href="tel:+48782068013"
+            className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 font-heading text-lg tracking-wide hover:bg-primary/90 transition-colors"
           >
-            <span className="material-symbols-outlined text-lg">call</span>
-            Zadzwoń teraz
+            <span className="material-symbols-outlined text-2xl">call</span>
+            Zadzwoń: 782 068 013
           </a>
         </div>
       </div>

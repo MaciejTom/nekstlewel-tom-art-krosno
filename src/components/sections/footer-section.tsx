@@ -12,7 +12,7 @@ const s = {
 
   // Logo - minimal
   logo: "flex items-center gap-2 group",
-  logoImage: "relative w-8 h-8",
+  logoImage: "relative w-12 h-12 p-2 bg-[#1a1a1a]",
 
   // Nav - horizontal, subtle
   nav: "flex flex-wrap justify-center gap-6",
