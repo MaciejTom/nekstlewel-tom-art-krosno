@@ -13,7 +13,7 @@ const s = {
 
   // Logo - minimal
   logo: "flex items-center gap-2 group",
-  logoImage: "relative w-12 h-12 p-2 bg-[#1a1a1a]",
+  logoImage: "relative w-12 h-12",
 
   // Nav - horizontal, subtle
   nav: "flex flex-wrap justify-center gap-6",
@@ -40,7 +40,7 @@ export function FooterSection() {
           <a href="/" className={s.logo}>
             <div className={s.logoImage}>
               <Image
-                src="/logo.webp"
+                src="/logo.png"
                 alt={siteConfig.name}
                 fill
                 className="object-contain"

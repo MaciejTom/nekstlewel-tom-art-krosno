@@ -12,7 +12,7 @@ const s = {
   container: "container mx-auto px-6 flex items-center justify-between h-16 md:h-20",
 
   logo: "flex items-center gap-2 group",
-  logoImage: "relative w-14 h-14 md:w-16 md:h-16 p-2 bg-[#1a1a1a]",
+  logoImage: "relative w-14 h-14 md:w-16 md:h-16",
 
   links: "hidden lg:flex items-center gap-1",
   link: "px-4 py-2 text-sm text-muted-foreground hover:text-primary transition-colors",
@@ -47,7 +47,7 @@ export function NavSection() {
           <a href="/" className={s.logo}>
             <div className={s.logoImage}>
               <Image
-                src="/logo.webp"
+                src="/logo.png"
                 alt={siteConfig.name}
                 fill
                 className="object-contain"
