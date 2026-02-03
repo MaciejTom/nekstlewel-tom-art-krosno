@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { IconCall } from "@/components/ui/icons";
 
 const reasons = [
   {
@@ -93,7 +94,7 @@ export function WhyUsAlternative() {
             href="tel:+48782068013"
             className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 font-heading text-lg tracking-wide hover:bg-primary/90 transition-colors"
           >
-            <span className="material-symbols-outlined text-2xl">call</span>
+            <IconCall className="w-6 h-6" />
             Zadzwoń: 782 068 013
           </a>
         </div>

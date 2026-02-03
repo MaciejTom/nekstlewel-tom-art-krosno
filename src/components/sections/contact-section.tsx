@@ -1,6 +1,7 @@
 "use client";
 
 import { contactContent, siteConfig } from "@/lib/content";
+import { IconCall, IconMail, IconLocation } from "@/components/ui/icons";
 
 const s = {
   section: "bg-background section-spacing",
@@ -62,7 +63,7 @@ export function ContactSection() {
             <div className={s.contactItems}>
               <a href={siteConfig.phoneHref} className={s.contactItem}>
                 <div className={s.contactIcon}>
-                  <span className={`material-symbols-outlined ${s.contactIconInner}`}>call</span>
+                  <IconCall className="w-5 h-5 text-primary-foreground" />
                 </div>
                 <div>
                   <div className={s.contactLabel}>Telefon</div>
@@ -72,7 +73,7 @@ export function ContactSection() {
 
               <a href={`mailto:${contactContent.details.email}`} className={s.contactItem}>
                 <div className={s.contactIcon}>
-                  <span className={`material-symbols-outlined ${s.contactIconInner}`}>mail</span>
+                  <IconMail className="w-5 h-5 text-primary-foreground" />
                 </div>
                 <div>
                   <div className={s.contactLabel}>Email</div>
@@ -82,7 +83,7 @@ export function ContactSection() {
 
               <div className={s.contactItem}>
                 <div className={s.contactIcon}>
-                  <span className={`material-symbols-outlined ${s.contactIconInner}`}>location_on</span>
+                  <IconLocation className="w-5 h-5 text-primary-foreground" />
                 </div>
                 <div>
                   <div className={s.contactLabel}>Adres</div>
@@ -92,7 +93,7 @@ export function ContactSection() {
 
               <div className={s.contactItem}>
                 <div className={s.contactIcon}>
-                  <span className={`material-symbols-outlined ${s.contactIconInner}`}>badge</span>
+                  <IconLocation className="w-5 h-5 text-primary-foreground" />
                 </div>
                 <div>
                   <div className={s.contactLabel}>NIP</div>
@@ -103,7 +104,7 @@ export function ContactSection() {
 
             <div className={s.area}>
               <div className={s.areaLabel}>
-                <span className={`material-symbols-outlined ${s.areaIcon}`}>map</span>
+                <IconLocation className="w-4 h-4 text-primary" />
                 Obszar działania
               </div>
               <div className={s.areaValue}>{contactContent.area}</div>
@@ -134,7 +135,7 @@ export function ContactSection() {
               </div>
 
               <a href={siteConfig.phoneHref} className={s.ctaButton}>
-                <span className={`material-symbols-outlined ${s.ctaButtonIcon}`}>call</span>
+                <IconCall className="w-6 h-6" />
                 {contactContent.cta.buttonLabel}
               </a>
             </div>

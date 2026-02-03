@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { servicesContent, siteConfig } from "@/lib/content";
+import { IconCall, IconCheck } from "@/components/ui/icons";
 
 const s = {
   section: "bg-background section-spacing",
@@ -76,7 +77,7 @@ export function ServicesSection() {
                 <ul className={s.featureList}>
                   {service.features.map((feature, i) => (
                     <li key={i} className={s.featureItem}>
-                      <span className="material-symbols-outlined text-primary text-base">check</span>
+                      <IconCheck className="w-4 h-4 text-primary flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -93,7 +94,7 @@ export function ServicesSection() {
               <p className={s.ctaSubtitle}>Przyjadę, obejrzę, wycenię konkretnie.</p>
             </div>
             <a href={siteConfig.phoneHref} className={s.ctaButton}>
-              <span className="material-symbols-outlined text-xl">call</span>
+              <IconCall className="w-5 h-5" />
               Zadzwoń: {siteConfig.phone}
             </a>
           </div>

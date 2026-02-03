@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { portfolioContent, siteConfig } from "@/lib/content";
+import { IconCall } from "@/components/ui/icons";
 
 const s = {
   section: "bg-background section-spacing",
@@ -98,7 +99,7 @@ export function PortfolioSection() {
         {/* CTA */}
         <div className={s.ctaSection}>
           <a href={siteConfig.phoneHref} className={s.ctaButton}>
-            <span className={`material-symbols-outlined ${s.ctaIcon}`}>call</span>
+            <IconCall className="w-6 h-6" />
             {portfolioContent.cta.label}: {portfolioContent.cta.phone}
           </a>
         </div>

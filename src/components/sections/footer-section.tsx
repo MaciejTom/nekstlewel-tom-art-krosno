@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { siteConfig, navItems } from "@/lib/content";
+import { IconCall, IconMail } from "@/components/ui/icons";
 
 const s = {
   footer: "bg-card border-t border-border",
@@ -39,7 +40,7 @@ export function FooterSection() {
           <a href="/" className={s.logo}>
             <div className={s.logoImage}>
               <Image
-                src="/logo.jpg"
+                src="/logo.webp"
                 alt={siteConfig.name}
                 fill
                 className="object-contain"
@@ -59,11 +60,11 @@ export function FooterSection() {
           {/* Contact */}
           <div className={s.contact}>
             <a href={siteConfig.phoneHref} className={s.contactLink}>
-              <span className={`material-symbols-outlined ${s.contactIcon}`}>call</span>
+              <IconCall className="w-4 h-4 text-primary" />
               {siteConfig.phone}
             </a>
             <a href={`mailto:${siteConfig.email}`} className={s.contactLink}>
-              <span className={`material-symbols-outlined ${s.contactIcon}`}>mail</span>
+              <IconMail className="w-4 h-4 text-primary" />
               {siteConfig.email}
             </a>
           </div>

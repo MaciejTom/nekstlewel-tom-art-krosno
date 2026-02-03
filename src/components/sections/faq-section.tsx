@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { faqContent } from "@/lib/content";
+import { IconExpandMore } from "@/components/ui/icons";
 
 const s = {
   section: "bg-secondary section-spacing",
@@ -61,11 +62,9 @@ export function FaqSection() {
                     {item.question}
                   </span>
                   <div className={`${s.questionIcon} ${isOpen ? s.questionIconOpen : ""}`}>
-                    <span
-                      className={`material-symbols-outlined ${s.questionIconInner} ${isOpen ? s.questionIconInnerOpen : ""}`}
-                    >
-                      expand_more
-                    </span>
+                    <IconExpandMore
+                      className={`w-5 h-5 ${s.questionIconInner} ${isOpen ? s.questionIconInnerOpen : ""}`}
+                    />
                   </div>
                 </button>
 

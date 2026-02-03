@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { navItems, siteConfig } from "@/lib/content";
+import { IconCall, IconMenu, IconClose } from "@/components/ui/icons";
 
 const s = {
   nav: "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
@@ -46,7 +47,7 @@ export function NavSection() {
           <a href="/" className={s.logo}>
             <div className={s.logoImage}>
               <Image
-                src="/logo.jpg"
+                src="/logo.webp"
                 alt={siteConfig.name}
                 fill
                 className="object-contain"
@@ -65,7 +66,7 @@ export function NavSection() {
 
           {/* CTA */}
           <a href={siteConfig.phoneHref} className={s.cta}>
-            <span className="material-symbols-outlined text-lg">call</span>
+            <IconCall className="w-5 h-5" />
             {siteConfig.phone}
           </a>
 
@@ -75,9 +76,7 @@ export function NavSection() {
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Menu"
           >
-            <span className="material-symbols-outlined text-2xl">
-              {mobileOpen ? "close" : "menu"}
-            </span>
+            {mobileOpen ? <IconClose className="w-6 h-6" /> : <IconMenu className="w-6 h-6" />}
           </button>
         </div>
       </nav>
@@ -97,7 +96,7 @@ export function NavSection() {
               </a>
             ))}
             <a href={siteConfig.phoneHref} className={s.mobileCta}>
-              <span className="material-symbols-outlined text-xl">call</span>
+              <IconCall className="w-5 h-5" />
               Zadzwoń: {siteConfig.phone}
             </a>
           </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { IconArrowUp } from "@/components/ui/icons";
 
 const s = {
   button: "fixed bottom-6 right-6 z-40 w-12 h-12 bg-primary text-primary-foreground flex items-center justify-center shadow-lg transition-all duration-300 hover:bg-primary/90 hover:scale-110",
@@ -29,7 +30,7 @@ export function BackToTop() {
       className={`${s.button} ${visible ? s.visible : s.hidden}`}
       aria-label="Wróć na górę"
     >
-      <span className="material-symbols-outlined text-2xl">arrow_upward</span>
+      <IconArrowUp className="w-6 h-6" />
     </button>
   );
 }

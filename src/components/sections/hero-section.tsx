@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { heroContent, siteConfig } from "@/lib/content";
+import { IconCall, IconSouth } from "@/components/ui/icons";
 
 const s = {
   section: "min-h-screen flex items-center relative bg-background pt-20",
@@ -35,7 +36,7 @@ export function HeroSection() {
     <section className={s.section}>
       <div className={s.imageBg}>
         <Image
-          src="/malcerHero.jpg"
+          src="/malcerHero.webp"
           alt="MAL-CER realizacje"
           fill
           className="object-cover"
@@ -57,12 +58,12 @@ export function HeroSection() {
 
           <div className={s.ctaWrapper}>
             <a href={siteConfig.phoneHref} className={s.ctaPrimary}>
-              <span className="material-symbols-outlined text-xl">call</span>
+              <IconCall className="w-5 h-5" />
               {heroContent.ctaPrimary.label}: {heroContent.ctaPrimary.phone}
             </a>
             <a href={heroContent.ctaSecondary.href} className={s.ctaSecondary}>
               {heroContent.ctaSecondary.label}
-              <span className="material-symbols-outlined text-lg">south</span>
+              <IconSouth className="w-5 h-5" />
             </a>
           </div>
 

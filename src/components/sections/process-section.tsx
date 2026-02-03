@@ -1,6 +1,7 @@
 "use client";
 
 import { processContent, siteConfig } from "@/lib/content";
+import { IconCall } from "@/components/ui/icons";
 
 const s = {
   section: "bg-secondary section-spacing",
@@ -79,7 +80,7 @@ export function ProcessSection() {
         {/* CTA */}
         <div className={s.ctaWrapper}>
           <a href={siteConfig.phoneHref} className={s.ctaButton}>
-            <span className={`material-symbols-outlined ${s.ctaIcon}`}>call</span>
+            <IconCall className="w-6 h-6" />
             Zadzwoń: {siteConfig.phone}
           </a>
         </div>
